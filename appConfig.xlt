@@ -1,11 +1,11 @@
 {
-	"appName": "癌症治疗",
-	"appPackageName": "top.webcat.app130297",
+	"appName": "动物派对",
+	"appPackageName": "top.webcat.app471556",
 	"appVersionName": "1.0",
 	"appVersionCode": 100000,
 	"data": {		
 		"启用顶栏": true,
-		"顶栏标题": "癌症治疗",
+		"顶栏标题": "动物派对",
 		"顶栏颜色": "#FF2C2E43",
 		"横屏": false,
 		"显示状态栏": true,

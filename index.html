@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>宫崎骏动漫幻想</title>
+    <link rel="stylesheet" href="./css/index.css">
     <style>
         a {
             text-decoration: none;
@@ -19,9 +20,13 @@
         }
 
         #banner {
-            width: 1600px;
-            height: 400px； border 2px solid #999;
+            /* width: 80%; */
+            height: 500px;
+            width: 80%;
+            border: 2px solid #999;
             overflow: hidden;
+            margin: 20px auto;
+            /* margin: 20px 0; */
         }
 
         #imglist {
@@ -54,30 +59,55 @@
 
     </DIV>
     <div id="banner">
-        <ul style="list-style: none;" id="imglist">
-            <li><img src="./images/2.jpg" alt="图片" srcset=""></li>
-            <li><img src="./images/3.jpg" alt="图片" srcset=""></li>
-            <li><img src="./images/4.jpg" alt="图片" srcset=""></li>
-            <li><img src="./images/5.jpg" alt="图片" srcset=""></li>
-            <li><img src="./images/6.jpg" alt="图片" srcset=""></li>
+        <!-- <ul style="list-style: none;" id="imglist">
+            <li><img src="" alt="图片" srcset=""></li>
+            <li><img src="" alt="图片" srcset=""></li>
+            <li><img src="" alt="图片" srcset=""></li>
+            <li><img src="" alt="图片" srcset=""></li>
+            <li><img src="" alt="图片" srcset=""></li>
 
-        </ul>
-
+        </ul> -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(./images/2.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./images/3.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./images/4.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./images/5.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./images/6.jpg)"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-white"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next swiper-button-white"></div>
+            <div class="swiper-button-prev swiper-button-white"></div>
+        </div>
     </div>
     <script>
-        var left = 0;
-        var timer;
-        run();
-        function run() {
-            if (left <= -3200) {
-                left = 0;
-            }
-            imglist.style.marginLeft = left + 'px';
-            var n = (left % 800 == 0) ? n = 1200 : n = 10;
-            left -= 10;
-            timer = setTimeout(run, n);
-        }
+        // var left = 0;
+        // var timer;
+        // run();
+        // function run() {
+        //     if (left <= -3200) {
+        //         left = 0;
+        //     }
+        //     imglist.style.marginLeft = left + 'px';
+        //     var n = (left % 800 == 0) ? n = 1200 : n = 10;
+        //     left -= 10;
+        //     timer = setTimeout(run, n);
+        // }
 
+    </script>
+    <script src="./js/index.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            slidesPerView: 1,
+            paginationClickable: true,
+            spaceBetween: 30,
+            loop: true
+        });
     </script>
     <hr>
     <img src="./images/7.jpg" style="width:250px;text-align: left;margin-left: -30px;">
